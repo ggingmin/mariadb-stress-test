@@ -66,7 +66,7 @@ const sleep = (ms) => {
         password: process.env.DB_PASSWORD,
         database: process.env.DATABASE_NAME});
 
-    for (let i = 0;  i< 1000; i++) {
+    for (let i = 0;  i < process.env.EXCECUTION_NUM; i++) {
         await main(pool);
         await sleep(100);
     }
